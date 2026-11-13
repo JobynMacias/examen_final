@@ -1,0 +1,3 @@
+id,name,model_id,group_id/id,operation,domain
+access_unicah_prestamo_user,Préstamos usuarios internos,unicah.prestamo,base.group_user,cru,
+access_unicah_prestamo_admin,Préstamos administrador,unicah.prestamo,base.group_system,crud,

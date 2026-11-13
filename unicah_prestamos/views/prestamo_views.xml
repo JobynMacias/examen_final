@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="prestamo_list" model="ir.ui.view"><field name="name">unicah.prestamo.list</field><field name="model">unicah.prestamo</field><field name="arch" type="xml"><list><field name="name"/><field name="partner_id"/><field name="equipo_id"/><field name="fecha_inicio"/><field name="fecha_fin"/><field name="dias"/><field name="state"/></list></field></record>
+    <record id="prestamo_form" model="ir.ui.view"><field name="name">unicah.prestamo.form</field><field name="model">unicah.prestamo</field><field name="arch" type="xml"><form><header><button name="action_prestar" string="Entregar equipo" type="object" invisible="state != 'borrador'"/><button name="action_devolver" string="Registrar devolución" type="object" invisible="state != 'prestado'"/><field name="state" widget="statusbar"/></header><sheet><group><field name="name"/><field name="partner_id"/><field name="equipo_id"/><field name="fecha_inicio"/><field name="fecha_fin"/><field name="dias"/><field name="notas"/></group></sheet></form></field></record>
+    <record id="prestamo_action" model="ir.actions.act_window"><field name="name">Préstamos de equipo</field><field name="res_model">unicah.prestamo</field><field name="view_mode">list,form</field></record>
+    <menuitem id="menu_unicah_root" name="UNICAH" sequence="30" groups="base.group_user"/>
+    <menuitem id="menu_prestamos" name="Préstamos de equipo" parent="menu_unicah_root" action="prestamo_action"/>
+</odoo>

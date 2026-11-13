@@ -1,0 +1,1 @@
+{'name': 'UNICAH Préstamos de equipo', 'version': '20.0.1.0.0', 'author': 'Jobyn Macias', 'depends': ['base', 'product'], 'data': ['security/ir.access.csv', 'views/prestamo_views.xml', 'views/res_partner_views.xml'], 'license': 'LGPL-3', 'application': True, 'installable': True}
